@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty of Engineering Students Union - Horus University</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- الهيدر وشريط التنقل -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <!-- تم تعديل الامتداد إلى logo.jpeg -->
+                <img src="logo.jpeg" alt="Horus University Logo" class="union-logo-img">
+                <span class="logo-text">Union HUE</span>
+            </div>
+            <nav>
+                <ul id="navLinks">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#news">شريط الأخبار</a></li>
+                    <li><a href="#events">معرض الأحداث</a></li>
+                    <li><a href="#about">عن الاتحاد</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- شريط الأخبار المتحرك -->
+    <div id="news" class="ticker-container">
+        <div class="ticker-title"><i class="fa-solid fa-bullhorn"></i> أخبار الاتحاد:</div>
+        <div class="ticker-wrap">
+            <div class="ticker-move">
+                <div class="ticker-item">📢 فتح باب الترشيح لانتخابات اتحاد طلاب كلية الهندسة بجامعة حورس للعام الدراسي الحالي.</div>
+                <div class="ticker-item">🏆 إعلان جدول مباريات اليوم الرياضي السنوي لكليات الهندسة.</div>
+                <div class="ticker-item">💡 مؤتمر كليه هندسه حاسبات يقدم أحدث مشاريع الذكاء الاصطناعي.</div>
+                <div class="ticker-item">⚡ زيارة ميدانية لطلاب كلية هندسة اتصالات لأكبر شركات الاتصالات المصرية.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم الرئيسية (Hero Section) -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>اتحاد طلاب كلية الهندسة - <span>جامعة حورس</span></h1>
+            <p>Faculty of Engineering Students Union - Horus University</p>
+            <a href="#events" class="btn">استكشف فعاليات الأحداث</a>
+        </div>
+    </section>
+
+    <!-- قسم معرض الأحداث (الصور الأربعة) -->
+    <section id="events" class="section events-section">
+        <div class="container">
+            <h2 class="section-title">أحداث اتحاد طلاب حورس (HUE)</h2>
+            <p class="section-desc">اضغط على أي حدث لاستعراض معرض الصور الخاص به</p>
+            
+            <div class="events-grid">
+                <!-- الحدث 1: اليوم الرياضي -->
+                <div class="event-card" onclick="openGallery('sports')">
+                    <div class="event-img" style="background-image: url('https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80')">
+                        <span class="event-tag">نشاط طلابي</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>اليوم الرياضي السنوي</h3>
+                        <p>منافسات حماسية وأجواء مفعمة بالحيوية والنشاط بين طلاب الأقسام المختلفة.</p>
+                        <span class="gallery-hint"><i class="fa-solid fa-images"></i> عرض الصور (4 صور)</span>
+                    </div>
+                </div>
+
+                <!-- الحدث 2: هندسة طبية -->
+                <div class="event-card" onclick="openGallery('biomedical')">
+                    <div class="event-img" style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80')">
+                        <span class="event-tag">كلية الهندسة الطبية</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>معرض الهندسة الطبية</h3>
+                        <p>ابتكارات هندسية متقدمة ونماذج أجهزة طبية بأيدي طلاب الكلية المبدعين.</p>
+                        <span class="gallery-hint"><i class="fa-solid fa-images"></i> عرض الصور (4 صور)</span>
+                    </div>
+                </div>
+
+                <!-- الحدث 3: هندسة حاسبات -->
+                <div class="event-card" onclick="openGallery('computers')">
+                    <div class="event-img" style="background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80')">
+                        <span class="event-tag">كلية هندسة الحاسبات</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>مؤتمر هندسة حاسبات البرمجي</h3>
+                        <p>استعراض مشاريع التخرج البرمجية وتطبيقات الذكاء الاصطناعي والأمن السيبراني.</p>
+                        <span class="gallery-hint"><i class="fa-solid fa-images"></i> عرض الصور (4 صور)</span>
+                    </div>
+                </div>
+
+                <!-- الحدث 4: اتصالات -->
+                <div class="event-card" onclick="openGallery('communications')">
+                    <div class="event-img" style="background-image: url('https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80')">
+                        <span class="event-tag">كلية الاتصالات</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>ورشة هندسة الاتصالات</h3>
+                        <p>تطبيقات عملية على شبكات الجيل الحديث وأنظمة الإرسال والاستقبال اللاسلكي.</p>
+                        <span class="gallery-hint"><i class="fa-solid fa-images"></i> عرض الصور (4 صور)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- نافذة المعرض المنبثقة (Modal Gallery) -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeGallery()">&times;</span>
+            <h2 id="modalTitle">عنوان الحدث</h2>
+            <div class="modal-gallery-grid" id="modalImages">
+                <!-- سيتم تعبئتها ديناميكياً عبر JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم عن الاتحاد -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">عن اتحاد طلاب جامعة حورس</h2>
+            <p class="section-desc">الممثل الشرعي والوحيد لطلاب كلية الهندسة، نسعى لخدمة الطالب وتطوير مهاراته الأكاديمية والمهنية.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h3>رؤيتنا</h3>
+                    <p>إعداد جيل هندسي قيادي قادر على الابتكار وتطوير المجتمع.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-hand-holding-hand"></i>
+                    <h3>رسالتنا</h3>
+                    <p>دعم الأنشطة الطلابية وتذليل العقبات وتوفير بيئة جامعية مثالية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بنا -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">تواصل مع إدارة الاتحاد</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="اسم الطالب / الثلاثي" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="البريد الجامعي" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" placeholder="اكتب شكواك أو مقترحك هنا..." required></textarea>
+                </div>
+                <button type="submit" class="btn">إرسال المقترح</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- الفوتر مع اللوجو والألوان الأصلية -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo-area">
+                <!-- تم تعديل الامتداد إلى logo.jpeg -->
+                <img src="logo.jpeg" alt="Logo" class="footer-logo">
+                <div>
+                    <h3>Union HUE</h3>
+                    <p>Faculty of Engineering Students Union - Horus University</p>
+                </div>
+            </div>
+            <p class="copyright">جميع الحقوق محفوظة &copy; 2026 - اتحاد طلاب كلية الهندسة بجامعة حورس</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
